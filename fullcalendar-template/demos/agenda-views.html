@@ -1,0 +1,108 @@
+	<!DOCTYPE html>
+	<html lang="pt-br">	<head>
+<meta charset='utf-8' />
+<link href='../fullcalendar.css' rel='stylesheet' />
+<link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../lib/moment.min.js'></script>
+<script src='../lib/jquery.min.js'></script>
+<script src='../fullcalendar.min.js'></script>
+<script src='../lang/pt-br.js'></script>
+<script>
+
+	$(document).ready(function() {
+		
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			defaultDate: Date(),
+			editable: true,
+			eventLimit: true,
+			navLinks: true, 
+			
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2020-10-21'
+				},
+				{
+					title: 'Long Event',
+					start: '2020-10-24',
+					end: '2020-10-22'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2020-10-10T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2020-10-14T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2020-10-11',
+					end: '2020-10-9	'
+				},
+				{
+					title: 'Meeting',
+					start: '2020-10-31T10:30:00',
+					end: '2020-10-30T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2020-10-02T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2020-10-02T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2020-10-02T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2020-10-02T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2020-10-06T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2020-10-22'
+				}
+			]
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+
+</body>
+</html>
